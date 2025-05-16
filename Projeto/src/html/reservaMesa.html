@@ -31,20 +31,20 @@
     <div class="content">
       <div class="right">
       <div class="mesas">
-        <div class="mesa" data-lugares="4">01</div>
+        <div class="mesa reservada" data-lugares="4">01</div>
         <div class="mesa" data-lugares="6">02</div>
         <div class="mesa" data-lugares="2">03</div>
         <div class="mesa" data-lugares="5">04</div>
-        <div class="mesa" data-lugares="7">05</div>
+        <div class="mesa reservada" data-lugares="7">05</div>
         <div class="mesa" data-lugares="3">06</div>
-        <div class="mesa" data-lugares="8">07</div>
+        <div class="mesa reservada" data-lugares="8">07</div>
         <div class="mesa" data-lugares="2">08</div>
         <div class="mesa" data-lugares="6">09</div>
         <div class="mesa" data-lugares="4">10</div>
-        <div class="mesa" data-lugares="7">12</div>
+        <div class="mesa reservada" data-lugares="7">12</div>
         <div class="mesa" data-lugares="5">13</div>
         <div class="mesa" data-lugares="3">14</div>
-        <div class="mesa" data-lugares="8">15</div>
+        <div class="mesa reservada" data-lugares="8">15</div>
         <div class="mesa" data-lugares="6">16</div>
         <div class="mesa" data-lugares="9">17</div>
       </div>
@@ -106,8 +106,9 @@
 
     document.querySelectorAll('.mesa').forEach(mesa => {
       mesa.addEventListener('click', () => {
-        document.querySelectorAll('.mesa').forEach(m => m.classList.remove('selecionada'));
+        if (mesa.classList.contains('reservada')) return;
 
+        document.querySelectorAll('.mesa').forEach(m => m.classList.remove('selecionada'));
         mesa.classList.add('selecionada');
 
         mesaSelecionada = mesa.textContent;

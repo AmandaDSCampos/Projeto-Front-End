@@ -66,7 +66,8 @@ header>a {
 }
 
 a:hover {
-    background-color: #aaa3a3;
+    background-color: #fff;
+    color: #a54700;
     transform: scale(1.05);
     /* ADICIONADO: aumenta ~1px visualmente */
 }
