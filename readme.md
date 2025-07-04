@@ -24,7 +24,7 @@ Clone este repositório:
 
 1️⃣ - git clone https://github.com/AmandaDSCampos/Projeto-Front-End.git
 
-2️⃣ - cd Projeto-Front-End
+2️⃣ - cd projeto
 
 3️⃣ - node server.js
 
