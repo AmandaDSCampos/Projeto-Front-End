@@ -67,5 +67,64 @@
     </div>
 </aside>
 
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h3 id="modal-title"></h3>
+    <h4 id="modal-price"></h4>
+    <p id="modal-description" style="font-family: sans-serif"></p>
+    <img id="selo-vegano" src="/src/images/cardapio/selo-vegano.png" alt="Selo Vegano" style="width: 60px; position: relative; display: flex; justify-content: center; margin: 15px auto 0 auto;" />
+  </div>
+</div>
+
+<script>
+  const pratos = document.querySelectorAll('.Prato');
+  const modal = document.getElementById('modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalPrice = document.getElementById('modal-price');
+  const modalDescription = document.getElementById('modal-description');
+  const closeBtn = document.querySelector('.close-btn');
+  const seloVegano = document.getElementById('selo-vegano');
+
+  const descricoes = {
+    "Lasanha a Bolonhesa": "Massa fresca, molho bolonhesa com carne moída, queijo muçarela, presunto e molho bechamel.",
+    "Filé de Peixe Grelhado": "Filé de peixe fresco grelhado, limão, ervas finas, azeite de oliva e legumes salteados.",
+    "Carne Assada": "Carne bovina assada lentamente, temperada com alho, cebola, vinho tinto e ervas aromáticas.",
+    "Ravioli ao Molho Branco": "Massa recheada com ricota e espinafre, servida com molho branco cremoso e queijo parmesão.",
+    "Caçarola de Vegetais": "Brócolis, couve-flor, cenoura, abobrinha, molho de tomate artesanal e queijo gratinado.",
+    "Espaguete com Filé Mignon": "Espaguete al dente, tiras de filé mignon, molho de vinho tinto e cogumelos frescos."
+  };
+
+  pratos.forEach(prato => {
+    prato.addEventListener('click', () => {
+      const title = prato.querySelector('h3').innerText;
+      const price = prato.querySelector('h4').innerText;
+
+      modalTitle.innerText = title;
+      modalPrice.innerText = price;
+      modalDescription.innerText = descricoes[title] || "Ingredientes não disponíveis.";
+       
+      if (title === "Caçarola de Vegetais") {
+        seloVegano.style.display = 'block';
+      } else {
+        seloVegano.style.display = 'none';
+      }
+
+      modal.style.display = 'flex';
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+</script>
+
+
 </body>
 </html>
