@@ -11,15 +11,21 @@ Feedback do usuário via avaliações do restaurante
 Interface responsiva para diferentes tamanhos de tela
 
 🧰 Tecnologias Utilizadas
+
 HTML5 – Estruturação da aplicação
+
 CSS3 – Estilização, responsividade e layout
+
 JavaScript (puro) – Funcionalidade dinâmica e validação de formulários
 
 🚀 Como Executar
+
 Clone este repositório:
 
 1️⃣ - git clone https://github.com/AmandaDSCampos/Projeto-Front-End.git
+
 2️⃣ - cd Projeto-Front-End
+
 3️⃣ - node server.js
 
 ✅ Em seguida, basta acessar o sistema localmente através do endereço: http://localhost:8080/
