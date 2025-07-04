@@ -222,4 +222,97 @@ body {
     z-index: 20;
     font-weight: bold;
   }
+
+  .footer-mobile {
+    display: none;
+  }  
+
+  .avaliacao {
+    display: flex;
+    align-items: center;
+    gap: 15px;           
+  }
+
+  .avaliacao .texto {
+    flex: 1;              
+    min-width: 0;        
+  }
+
+  @media (max-width: 480px) {
+    .avaliacoes-container {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+    .coluna {
+      width: 100%;
+    }
+
+    .header-avaliacoes a i.fa-martini-glass {
+      display: none;
+    }
   
+    .header-avaliacoes nav {
+      display: none;
+    }
+
+    .footer-mobile {
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      background-color: #cc5802;
+      gap: 20px;
+    }
+
+    .footer-mobile i {
+      color: white;
+      font-size: 24px;
+    }
+
+    .footer-mobile i:hover {
+      color: #aaa3a3;
+      transform: scale(1.3);
+      transition: 0.2s;
+    }
+    #taca{
+      margin-left:15px;
+    }
+
+    .modal-conteudo {
+      width: 80vw;
+      padding: 20px;
+      margin: 20% auto;
+    }
+
+    .modal-conteudo h2 {
+      font-size: 20px;
+    }
+
+    .modal-conteudo input,
+    .modal-conteudo textarea,
+    .modal-conteudo select,
+    .modal-conteudo button {
+      font-size: 14px;
+    }
+
+   .containerAvaliacao {
+      padding: 0 20px; 
+      text-align: center;
+    }
+
+  
+    .avaliacao {
+      align-items: center;
+    }
+
+    .avaliacao img {
+      width: 70px;
+      height: 70px;
+      flex-shrink: 0; 
+    }
+
+    .avaliacao .texto {
+      margin: 0;
+    }
+  }
+
